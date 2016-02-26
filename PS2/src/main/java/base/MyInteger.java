@@ -1,17 +1,24 @@
 package base;
 public class MyInteger {
 	
-	private int iValue = 10;
-	int MyInteger = iValue;
+	private int iValue;
+
 	
+	public MyInteger(int iValue) {
+		super();
+		this.iValue = iValue;
+	}
+
 	public int getValue(){
 		return iValue;
 	}
 	
 	public boolean isEven(){
-		if (iValue % 2 == 0){
+		if (getValue() % 2 == 0){
 			return true;
-		}else{
+		}
+		else{
+			
 			return false;
 		}
 	}
@@ -59,47 +66,21 @@ public class MyInteger {
 	}
 	
 	public boolean equals(int val){
-		if(val == iValue){
+		if(val == getValue()){
 			return true;
 			}else{
 				return false;
 			}
 		}
-	/*
-	public boolean equals(MyInteger){
-		if(MyInteger == iValue){
-			return true;
-		}else{
-			return false;
-		}
+	public static boolean isEven(MyInteger integer){
+		return integer.isEven();
 	}
-	*/
-	
-	/*
-	public static boolean isEven(MyInteger){
-		if (iValue % 2 == 0){
-			return true;
-		}else{
-			return false;
-		}
+	public static boolean isOdd(MyInteger integer){
+		return integer.isOdd();
 	}
 	
-	public static boolean isOdd(MyInteger){
-		if (iValue % 2 != 0){
-			return true;
-		}else{
-			return false;
-		}
+	public static boolean isPrime(MyInteger integer){
+		return integer.isPrime();
 	}
-	
-	public static boolean isPrime(MyInteger){
-		for (int x = 2; x < iValue; x = x + 1){
-			if(iValue % x == 0){
-				return false;
-			}
-		}
-		return true;
-	}
-	*/
 
 }
